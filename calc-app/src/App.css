@@ -1,0 +1,58 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1e002a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calc-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+}
+ 
+.calc-grid > button {
+  font-size: 2rem;
+  cursor: pointer;
+  outline: none;
+  border: 3px solid white;
+  background-color: #dcd0ff;
+ }
+
+ .calc-grid > button:hover,
+ .calc-grid > button:focus {
+   background-color: white;
+ }
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: #18191a;
+  display: flex;
+  font-size: 2rem;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: .75rem;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.output .prev-op {
+  color: gray;
+  font-size: 1.5rem;
+}
+
+.output .cur-op {
+  color: white;
+}
